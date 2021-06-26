@@ -36,5 +36,6 @@ $router->post('/post-data', 'Index@postData');
 $router->get('/teste', 'Index@teste');
 $router->get('/dashboard', 'Index@dashboard');
 $router->get('/delete/:id', 'Index@delete');
+$router->get('/getall/:id', 'GetUser@getUserId');
 
 $router->run();

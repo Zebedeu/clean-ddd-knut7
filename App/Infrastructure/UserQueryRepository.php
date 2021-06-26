@@ -8,9 +8,17 @@ use app\Domain\Repository\UserQueryRepositoryInterface;
 class UserQueryRepository implements UserQueryRepositoryInterface
 {
 
-    private  $users;
-    public function __construct(  $users) {
-        $this->users = $users;
+    private UserRepository $users;
+    
+    public function __construct( ) {
+        $this->users = new UserRepository(  new \Ballybran\Database\Drives\AbstractDatabasePDO(
+            [
+                'dns' => DB_TYPE . ':host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME ,
+                'users' => DB_USER ,
+                'pass' => DB_PASS
+        
+            ]
+        ));
     }
     public function getUsers() : array {
 

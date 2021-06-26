@@ -17,8 +17,6 @@ use app\Domain\ValueObject\UserId;
 use app\Domain\ValueObject\Email;
 use app\Domain\ValueObject\Name;
 use app\Domain\ValueObject\Password;
-
-
 class Index extends AbstractController
 {
     public function __construct()

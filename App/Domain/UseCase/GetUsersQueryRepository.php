@@ -3,7 +3,7 @@
 
 namespace app\Domain\UseCase;
 
-use app\Domain\Repository\UserCommandRepositoryInterface;
+use app\Domain\Repository\UserQueryRepositoryInterface;
 use app\Domain\Entity\User;
 use app\Domain\ValueObject\Email;
 use app\Domain\ValueObject\UserId;
@@ -14,10 +14,10 @@ use Throwable;
 
 class GetUsersQueryRepository
 {
-    private UserCommandRepositoryInterface $commandRepo;
+    private UserQueryRepositoryInterface $commandRepo;
 
     public function __construct(
-        UserCommandRepositoryInterface $commandRepo
+        UserQueryRepositoryInterface $commandRepo
     )
     {
         $this->commandRepo = $commandRepo;
@@ -37,7 +37,7 @@ class GetUsersQueryRepository
         			new Name($user['name']),
         			new Email($user['email']),
         			new Password($user['password'])
-        		)
+                );
         		
         	} catch (Exception $e) {
         		continue;

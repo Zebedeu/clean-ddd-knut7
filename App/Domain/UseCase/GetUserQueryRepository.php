@@ -14,7 +14,8 @@ class GetUserQueryRepository
     }
 
     public function action( UserId $userId) : User {
-        $getUsers = new GetUsersQueryRepository($this->queryRepo);
+        $getUsers = $this->queryRepo->getUsers();
+        
         $users = $getUsers->action();
 
         foreach ($users as $key => $user) {

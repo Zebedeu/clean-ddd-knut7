@@ -16,7 +16,7 @@ class UserRepository implements iUserRepository {
     }
 
     public function getUserById() : array {
-        return $this->entity->selectManager(' SELECT id FROM user ORDER BY id DESC LIMIT 1');
+        return $this->entity->selectManager(' SELECT * FROM user ORDER BY id DESC LIMIT 1');
     }
 
     public function insert($data) {
