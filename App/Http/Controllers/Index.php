@@ -45,7 +45,7 @@ class Index extends AbstractController
 
     private function getUserId(): UserId {
 
-        return new UserId( $this->model->getUser()[0]['id'] ?? 1 );
+        return new UserId( $this->model->getUsers()[0]['id'] ?? 1 );
     }
 
         private function getExecutionParams(Request $request): array
@@ -85,7 +85,7 @@ class Index extends AbstractController
     }
 
     public function dashboard() {
-        $userModel['data'] = $this->model->getUser();
+        $userModel['data'] = $this->model->getUsers();
 
         $this->view->add( $userModel ); 
         $this->view->render($this , 'dashboard');

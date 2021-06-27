@@ -22,7 +22,12 @@ class UserQueryRepository implements UserQueryRepositoryInterface
     }
     public function getUsers() : array {
 
-        return $this->users->getUserById();
+        return $this->users->getUsers();
+    }
+
+    public function getUseById( $id) : array {
+
+        return $this->users->getUserById($id);
     }
 
     public function save( $data)  {

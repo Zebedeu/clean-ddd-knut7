@@ -35,8 +35,8 @@ class IndexModel {
         $this->entity = new UserRepository($entity);
     }
 
-    public function getUser() : array {
-        return $this->entity->getUser();
+    public function getUsers() : array {
+        return $this->entity->getUsers();
     }
 
     public function getUserById() : array {

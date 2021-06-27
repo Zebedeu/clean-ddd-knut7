@@ -5,9 +5,9 @@ namespace app\Infrastructure;
 
 interface iUserRepository {
 
-	public function getUser() : array;
+	public function getUsers() : array;
 
-    public function getUserById() : array;
+    public function getUserById( $id) : array;
     
     public function insert($data);
     public function save(array $data, $id);
