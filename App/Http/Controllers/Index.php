@@ -78,9 +78,6 @@ class Index extends AbstractController
             );
             return $this->response->withStatus(500);
             }
-
-              
-
     }
 
     public function dashboard() {
@@ -91,25 +88,4 @@ class Index extends AbstractController
 
 
     }
-
-    function delete($id){
-
-        try {
-            if( $id ){
-
-               $this->model->delete($id);
-                Hook::header('dashboard');
-            } 
-        } catch (Exception $e) {
-            throw new Exception("Error Processing Request", 1);
-            
-        }
-    }
-
-    public function getVer() {
-        echo "string";
-    }
-
-
-
 }

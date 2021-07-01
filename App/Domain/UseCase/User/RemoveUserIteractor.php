@@ -4,6 +4,7 @@ namespace App\Domain\UseCase\User;
 
 use app\Domain\Repository\UserCommandRepositoryInterface;
 use app\Domain\ValueObject\UserId;
+use Ballybran\Helpers\Http\Hook;
 use RuntimeException;
 
 class RemoveUserIteractor {
@@ -18,6 +19,7 @@ class RemoveUserIteractor {
 
     try {
       $this->comandRepo->removeUser($userId);
+      Hook::Header('dashboard');
     } catch (\Throwable $th) {
      
       throw new RuntimeException(
