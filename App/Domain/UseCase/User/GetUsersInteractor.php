@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\UseCase;
+namespace app\Domain\UseCase\User;
 
 use App\Domain\Entity\User;
 use App\Domain\Repository\UserQueryRepositoryInterface;

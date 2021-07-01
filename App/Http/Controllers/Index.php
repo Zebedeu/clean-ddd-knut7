@@ -5,18 +5,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use \Ballybran\Helpers\Http\RecursiveDirectoryIterator;
 use Ballybran\Core\Controller\AbstractController;
-use Ballybran\Helpers\Security\Validate;
-use Ballybran\Helpers\Security\Val;
 use Ballybran\Core\View\View;
 use Ballybran\Helpers\Http\Hook;
-use Ballybran\Helpers\Utility\Hash;
-use Ballybran\Helpers\Stdlib\HydratorConverter;
-use app\Domain\UseCase\AddUserIteractor;
+use app\Domain\UseCase\User\AddUserIteractor;
 use app\Infrastructure\UserCommandRepository;
 use app\Domain\ValueObject\UserId;
 use app\Domain\ValueObject\Email;
 use app\Domain\ValueObject\Name;
 use app\Domain\ValueObject\Password;
+use Exception;
+use Throwable;
+
 class Index extends AbstractController
 {
     public function __construct()

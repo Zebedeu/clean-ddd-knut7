@@ -1,17 +1,13 @@
 <?php
 
 
-namespace app\Domain\UseCase;
+namespace App\Domain\UseCase\User;
 
-use app\Domain\Repository\UserCommandRepositoryInterface;
 use app\Domain\Repository\UserQueryRepositoryInterface;
 use app\Domain\Entity\User;
+use App\Domain\UseCase\User\GetUsersInteractor;
 use app\Domain\ValueObject\UserId;
-use app\Domain\ValueObject\Email;
-use app\Domain\ValueObject\Name;
-use app\Domain\ValueObject\Password;
 use RuntimeException;
-use Throwable;
 
 class GetUserInteractor {
 

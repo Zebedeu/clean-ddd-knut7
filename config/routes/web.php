@@ -37,5 +37,6 @@ $router->get('/teste', 'Index@teste');
 $router->get('/dashboard', 'Index@dashboard');
 $router->get('/delete/:id', 'Index@delete');
 $router->get('/getall/:id', 'GetUser@getUserId');
+$router->get('/remove/:id', 'RemoveUser@removeById');
 
 $router->run();

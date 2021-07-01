@@ -33,8 +33,10 @@ class UserQueryRepository implements UserQueryRepositoryInterface
     public function save( $data)  {
 
         return $this->users->insert($data, null);
+    }
 
-
+    public function delete($id) {
+        return $this->users->delete($id);
     }
    
 }

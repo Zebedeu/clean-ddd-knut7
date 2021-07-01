@@ -10,6 +10,8 @@ use app\Domain\ValueObject\Email;
 use app\Domain\ValueObject\Password;
 use app\Infrastructure\UserQueryRepository;
 use app\Domain\Repository\UserCommandRepositoryInterface;
+use JsonException;
+use RuntimeException;
 
 class UserCommandRepository implements UserCommandRepositoryInterface {
 
@@ -17,10 +19,9 @@ class UserCommandRepository implements UserCommandRepositoryInterface {
     private array $users;
     private object $objUsers;
 
-    public function __construct($model) {
+    public function __construct() {
 
-
-    	$this->objUsers =  new UserQueryRepository($model);
+    	$this->objUsers =  new UserQueryRepository();
         $this->users = $this->objUsers->getUsers();
 
     }
@@ -55,12 +56,10 @@ class UserCommandRepository implements UserCommandRepositoryInterface {
         } catch (JsonException $e) {
             throw new RuntimeException('User data is invalid.'. $e);
         }
-
-
     }
 
     public function removeUser(UserId $UserId): void {
-
+           $this->objUsers->delete($UserId->getId());
     }
 
     public function updateUser(User $updatedUser): void {
