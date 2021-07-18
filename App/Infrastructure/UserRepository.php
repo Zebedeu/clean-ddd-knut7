@@ -35,4 +35,10 @@ class UserRepository implements iUserRepository {
     public function delete(int $id ) {
          $this->entity->delete('user', "id=$id", 1);
     }
+
+    public function update(array $data, int $id) {
+
+       return $this->entity->update('user', $data, "id=$id");
+
+    }
 }

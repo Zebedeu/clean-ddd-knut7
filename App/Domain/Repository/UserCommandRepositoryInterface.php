@@ -19,5 +19,5 @@ interface UserCommandRepositoryInterface
 
     public function removeUser(UserId $UserId): void;
 
-    public function updateUser(User $updatedUser): void;
+    public function updateUser(User $updatedUser): int;
 }

@@ -13,6 +13,8 @@ use app\Domain\ValueObject\UserId;
 use app\Domain\ValueObject\Email;
 use app\Domain\ValueObject\Name;
 use app\Domain\ValueObject\Password;
+use Ballybran\Helpers\Security\ValidateTypes;
+use Ballybran\Helpers\Security\ValidateTypesInterface;
 use Exception;
 use Throwable;
 
@@ -52,7 +54,7 @@ class Index extends AbstractController
         $executionParams = $request->request->all();
         return [
             "name" => new Name($executionParams['name']),
-            "email" => new Email($executionParams['email']),
+            "email" => new Email($executionParams['email'], new ValidateTypes),
             "password" => new Password($executionParams['password'])
         ];
     }

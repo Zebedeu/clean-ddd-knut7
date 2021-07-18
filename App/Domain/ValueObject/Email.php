@@ -19,9 +19,7 @@ class Email implements JsonSerializable
             );
         }
 
-        $onlyValidChars = ctype_alnum(
-                str_replace(' ', '', $email)
-            ) === TRUE;
+        $onlyValidChars = filter_var($email, FILTER_VALIDATE_EMAIL);
         if (!$onlyValidChars) {
             throw new RuntimeException(
                 'Only alphanumeric characters are allowed on email.'
@@ -36,7 +34,7 @@ class Email implements JsonSerializable
         return $this->email;
     }
 
-    public function __toString()
+    public function __toString() : string
     {
         return $this->email;
     }

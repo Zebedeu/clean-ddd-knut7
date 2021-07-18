@@ -62,7 +62,22 @@ class UserCommandRepository implements UserCommandRepositoryInterface {
            $this->objUsers->delete($UserId->getId());
     }
 
-    public function updateUser(User $updatedUser): void {
-    	
+    public function updateUser(
+        User $user
+        ): int {
+
+            try {
+                $updateUser = $user;
+
+                $data = [
+                'name' => (string) $updateUser->getName(),
+                'email' => (string) $updateUser->getEmail(),
+                'password' => (string) $updateUser->getPassword()
+                ];
+
+                return $this->objUsers->update($data,  $updateUser->getId()->getId());
+            } catch (JsonException $e) {
+                throw new RuntimeException('User data is invalid.'. $e);
+            }
     }
 }

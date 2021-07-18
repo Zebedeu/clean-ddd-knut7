@@ -38,5 +38,9 @@ class UserQueryRepository implements UserQueryRepositoryInterface
     public function delete($id) {
         return $this->users->delete($id);
     }
+
+    public function update($data, $id) {
+        return $this->users->update($data, $id);
+    }
    
 }
