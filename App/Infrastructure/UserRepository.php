@@ -28,6 +28,9 @@ class UserRepository implements iUserRepository {
         return $this->entity->save(' user', $data, $id, 'id='.$id);
 
     }
+    public function saveContact(array $data, $id) {
+        return $this->entity->insert('contacts', $data);
+    }
     
     public function lastInsertId() {
         return $this->entity->lastInsertId();
@@ -40,5 +43,9 @@ class UserRepository implements iUserRepository {
 
        return $this->entity->update('user', $data, "id=$id");
 
+    }
+
+    public function getContacts() {
+        return $this->entity->selectManager(' SELECT * FROM contacts');
     }
 }
