@@ -4,10 +4,10 @@
 namespace app\Infrastructure;
 
 use app\Domain\Entity\User;
-use app\Domain\ValueObject\UserId;
-use app\Domain\ValueObject\Name;
-use app\Domain\ValueObject\Email;
-use app\Domain\ValueObject\Password;
+use app\Domain\ValueObject\User\UserId;
+use app\Domain\ValueObject\User\Email;
+use app\Domain\ValueObject\User\Name;
+use app\Domain\ValueObject\User\Password;
 use app\Infrastructure\UserQueryRepository;
 use app\Domain\Repository\UserCommandRepositoryInterface;
 use JsonException;

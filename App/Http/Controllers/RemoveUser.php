@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Domain\UseCase\User\RemoveUserIteractor;
-use app\Domain\ValueObject\UserId;
+use app\Domain\ValueObject\User\UserId;
 use app\Infrastructure\UserCommandRepository;
 
 class RemoveUser {

@@ -3,7 +3,7 @@
 namespace App\Domain\UseCase\User;
 
 use app\Domain\Repository\UserCommandRepositoryInterface;
-use app\Domain\ValueObject\UserId;
+use app\Domain\ValueObject\User\UserId;
 use Ballybran\Helpers\Http\Hook;
 use RuntimeException;
 

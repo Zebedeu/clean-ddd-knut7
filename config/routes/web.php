@@ -40,4 +40,8 @@ $router->get('/getall/:id', 'GetUser@getUserId');
 $router->get('/remove/:id', 'RemoveUser@removeById');
 $router->post('/update', 'UpdateUser@update');
 
+$router->get('/add-contact', 'AddContact@index');
+$router->post('/post-contact', 'AddContact@postData');
+
+
 $router->run();

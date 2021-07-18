@@ -4,7 +4,7 @@ namespace app\Http\Controllers;
 
 use Ballybran\Core\Controller\AbstractController;
 use app\Domain\UseCase\User\GetUserInteractor;
-use app\Domain\ValueObject\UserId;
+use app\Domain\ValueObject\User\UserId;
 use app\Infrastructure\UserQueryRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Throwable;

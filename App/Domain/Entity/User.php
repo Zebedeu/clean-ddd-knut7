@@ -3,10 +3,10 @@
 
 namespace app\Domain\Entity;
 
-use app\Domain\ValueObject\UserId;
-use app\Domain\ValueObject\Email;
-use app\Domain\ValueObject\Name;
-use app\Domain\ValueObject\Password;
+use app\Domain\ValueObject\User\UserId;
+use app\Domain\ValueObject\User\Email;
+use app\Domain\ValueObject\User\Name;
+use app\Domain\ValueObject\User\Password;
 
 class User {
 		private UserId $id;

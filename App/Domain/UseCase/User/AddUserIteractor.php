@@ -4,9 +4,9 @@
 namespace App\Domain\UseCase\User;
 
 use app\Domain\Repository\UserCommandRepositoryInterface;
-use app\Domain\ValueObject\Email;
-use app\Domain\ValueObject\Name;
-use app\Domain\ValueObject\Password;
+use app\Domain\ValueObject\User\Email;
+use app\Domain\ValueObject\User\Name;
+use app\Domain\ValueObject\User\Password;
 use RuntimeException;
 use Throwable;
 

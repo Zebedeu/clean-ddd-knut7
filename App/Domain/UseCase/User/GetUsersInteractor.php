@@ -4,10 +4,10 @@ namespace app\Domain\UseCase\User;
 
 use App\Domain\Entity\User;
 use App\Domain\Repository\UserQueryRepositoryInterface;
-use App\Domain\ValueObject\UserId;
-use App\Domain\ValueObject\Name;
-use App\Domain\ValueObject\Email;
-use App\Domain\ValueObject\Password;
+use App\Domain\ValueObject\User\UserId;
+use App\Domain\ValueObject\User\Name;
+use App\Domain\ValueObject\User\Email;
+use App\Domain\ValueObject\User\Password;
 use Throwable;
 
 class GetUsersInteractor

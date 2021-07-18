@@ -4,10 +4,10 @@
 namespace app\Domain\Repository;
 
 use app\Domain\Entity\User;
-use app\Domain\ValueObject\UserId;
-use app\Domain\ValueObject\Email;
-use app\Domain\ValueObject\Name;
-use app\Domain\ValueObject\Password;
+use app\Domain\ValueObject\User\UserId;
+use app\Domain\ValueObject\User\Email;
+use app\Domain\ValueObject\User\Name;
+use app\Domain\ValueObject\User\Password;
 
 interface UserCommandRepositoryInterface
 {

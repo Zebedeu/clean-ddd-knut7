@@ -6,7 +6,7 @@ namespace App\Domain\UseCase\User;
 use app\Domain\Repository\UserQueryRepositoryInterface;
 use app\Domain\Entity\User;
 use App\Domain\UseCase\User\GetUsersInteractor;
-use app\Domain\ValueObject\UserId;
+use app\Domain\ValueObject\User\UserId;
 use RuntimeException;
 
 class GetUserInteractor {

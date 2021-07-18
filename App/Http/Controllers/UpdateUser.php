@@ -3,17 +3,15 @@
 
 use app\Domain\Entity\User;
 use app\Domain\UseCase\User\UpdateUserIteractor;
-use app\Domain\ValueObject\Email;
-    use app\Domain\ValueObject\Name;
-    use app\Domain\ValueObject\Password;
-use app\Domain\ValueObject\UserId;
+use app\Domain\ValueObject\User\UserId;
+use app\Domain\ValueObject\User\Email;
+use app\Domain\ValueObject\User\Name;
+use app\Domain\ValueObject\User\Password;
 use app\Infrastructure\UserCommandRepository;
-    use Ballybran\Helpers\Http\Hook;
-use Exception;
 use RuntimeException;
 use Symfony\Component\HttpFoundation\Request;
-    use Symfony\Component\HttpFoundation\Response;
-    use Throwable;
+use Symfony\Component\HttpFoundation\Response;
+use Throwable;
 
 class UpdateUser {
     

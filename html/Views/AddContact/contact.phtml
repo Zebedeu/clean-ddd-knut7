@@ -1,0 +1,40 @@
+<div class="container">
+
+<?php if( !empty($this->dot->get('ver')['message']) ) { ?>
+<div class="alert alert-warning" role="alert">
+              <?php  echo  $this->dot->get('ver')['message']; ?>
+</div>
+<?php } ?>
+
+<form class="row g-3 needs-validation" novalidate action="<?php echo URL;?>post-contact" method="post">
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Address</label>
+    <div class="input-group has-validation">
+      <input type="email" name="address" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a Email.
+      </div>
+    </div>
+    </div>
+
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Country</label>
+      <input type="text" name="country" class="form-control" id="validationCustom02" value="" required>
+
+      <div class="valid-feedback">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">City</label>
+      <input type="text" name="city" class="form-control" id="validationCustom02" value="" required>
+
+      <div class="valid-feedback">
+      </div>
+    </div>
+
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Salvar</button>
+  </div>
+</form>
+</div>
+
